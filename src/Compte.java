@@ -1,17 +1,21 @@
 public class Compte extends Client{
-    private int numeroCompte;
+
+    //attribut
+    //variable de classe
+    private int idCompte;
     private int solde ;
     private int virement;
     private int retrait;
     private int encaisser;
     private String beneficiaire;
 
+    // constructeurs
     public Compte (int idCompte, int montant){
-        //permet de dire que ces l'information de Client (super)
         super(idCompte);
         this.solde = montant;
-
     }
+
+    //methodes
 
     public double getSolde() {
         //Affichage du solde

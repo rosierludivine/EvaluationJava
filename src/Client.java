@@ -9,9 +9,18 @@ public class Client {
 
      private int nTelephone;
 
-     public Client(int idCompte){
-          this.idCompte = idCompte;
+     public  Client(String nom, String prenom, String ville, int codePostal, int telephone, int idCompte ){
+          this.name = nom;
+          this.prenom= prenom;
+          this.ville= ville;
+          this.codePostal = codePostal;
+          this.nTelephone= telephone;
+          this.idCompte= idCompte;
      }
+
+     public Client(int idCompte) {
+     }
+
      public int getIdCompte(){
           return idCompte;
      }
