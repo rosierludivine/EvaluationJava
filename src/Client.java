@@ -48,9 +48,6 @@ public class Client {
           return ville;
      }
 
-     public void setVille(String ville) {
-          this.ville = ville;
-     }
 
      public int getCodePostal() {
           return codePostal;
