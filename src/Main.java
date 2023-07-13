@@ -58,7 +58,7 @@ public class Main {
 
             }
 
-
+/*
             Scanner scanner = new Scanner(System.in);
             System.out.println("Veuillez entrer votre identifiant:\nVous avez 2 tentatives  ");
             // La valeur entrer par l'utilisateur est dans la variable idCompte
@@ -73,14 +73,14 @@ public class Main {
             } else {
                 System.out.println("Code bon \nChargement en cours ");
             }
-
+*/
             // Fin de la connection
             //Debut du menu
             System.out.println("1- Regarder votre Solde\n2- Faire un virement\n3- Retirer\n4- Ajouter de l'argent\n5- Modification du compte\n6- Informations du compte \n7-Quitter  ");
             System.out.println("Ecrivez le numero du menu choissi ");
 
 
-            int menu = scanner.nextInt();
+            int menu = utilisateur.nextInt();
             while (menu != 7) {
                 switch (menu) {
                     case 1:
@@ -91,23 +91,23 @@ public class Main {
                         //Permettre de faire un virement
                         // Amelioration ( faire avec des doubles )
                         System.out.println("Ecrivez les virements, ne contiennent pas de centime ");
-                        int montant = scanner.nextInt();
+                        int montant = utilisateur.nextInt();
                         System.out.println("A qui voulez vous faire le virement ? ");
-                        String personne = scanner.next();
+                        String personne = utilisateur.next();
                         newCompte.setVirement(montant, personne);
                         System.out.println(newCompte.getVirement());
                         break;
                     case 3:
                         //Retirer de l'argent du distributeur
                         System.out.println("Ecrivez les virements,le distributeur ne permet pas de vous donner des centimes ");
-                        int retrait = scanner.nextInt();
+                        int retrait = utilisateur.nextInt();
                         newCompte.setRetrait(retrait);
                         System.out.println(newCompte.getRetrait());
                         break;
                     case 4:
                         //Ajouter de l'argent
                         System.out.println("Ecrivez les virements,le distributeur ne permet pas de vous donner des centimes ");
-                        int encaisser = scanner.nextInt();
+                        int encaisser = utilisateur.nextInt();
                         newCompte.setEncaisser(encaisser);
                         System.out.println(newCompte.getEncaisser());
                         break;
@@ -115,42 +115,42 @@ public class Main {
                         //Modifier les information du compte
                         System.out.println("Veuillez ecrire le numéro qui correspond au champs à modifier");
                         System.out.println("1- Modifier votre Nom \n2- Modifier le Prenom \n3- Modifier la ville \n4- Modifier le Code Postal\n5- Modification le numéro de téléphone\n 6-Menu Principal  ");
-                        int modification = scanner.nextInt();
+                        int modification = utilisateur.nextInt();
                         while (modification != 6) {
 
                             switch (modification) {
                                 case 1:
                                     System.out.println("Quelle est le Nom");
-                                    String nom = scanner.next();
+                                    String nom = utilisateur.next();
                                     newClient1.setName(nom);
                                     System.out.println(newClient1.getName());
                                     break;
                                 case 2:
                                     System.out.println("Quelle est la Prenom");
-                                    String prenom = scanner.next();
+                                    String prenom = utilisateur.next();
                                     newClient1.setPrenom(prenom);
                                     System.out.println(newClient1.getPrenom());
                                     break;
                                 case 3:
                                     System.out.println("Quelle est votre nouvelle ville ");
-                                    String ville = scanner.next();
+                                    String ville = utilisateur.next();
                                     System.out.println(newClient1.getVille());
                                     break;
                                 case 4:
                                     System.out.println("Quelle est votre nouveaux code postale ");
-                                    int cp = scanner.nextInt();
+                                    int cp = utilisateur.nextInt();
                                     newClient1.setCodePostal(cp);
                                     System.out.println(newClient1.getCodePostal());
                                     break;
                                 case 5:
                                     System.out.println("Quelle est votre nouveaux numérro de téléphone ");
-                                    int nTelephone = scanner.nextInt();
+                                    int nTelephone = utilisateur.nextInt();
                                     newClient1.setnTelephone(nTelephone);
                                     System.out.println(newClient1.getnTelephone());
                                     break;
                             }
                             System.out.println("1- Modifier votre Nom \n2- Modifier le Prenom \n3- Modifier la ville \n4- Modifier le Code Postal\n5- Modification le numéro de téléphone\n 6-Menu Principal  ");
-                            modification = scanner.nextInt();
+                            modification = utilisateur.nextInt();
                         }
                         //modification = scanner.nextInt();
                         System.out.println("1- Regarder votre Solde\n2- Faire un virement\n3- Retirer\n4- Ajouter de l'argent\n5- Modification du compte\n6- Informations du compte \n7-Quitter  ");
@@ -169,7 +169,7 @@ public class Main {
 
                 //test du bon fonctionnement de ma boucle
                 System.out.println("Ecrivez le numero du menu choissi ");
-                menu = scanner.nextInt();
+                menu = utilisateur.nextInt();
 
             }
             System.out.println("Au revoir, au plaisir de vous revoir ");
